@@ -1,11 +1,111 @@
- <!DOCTYPE html>
-<html>
-<head>
-<title>Simon Abrelat</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Abrelat</title>
+  </head>
+  <body>
+    <main>
+      <section class="about">
+        <h1 class="title">Simon Abrelat</h1>
+        <p>Hello! I'm Simon, a software developer currently based out of Atlanta, Georgia. In May of 2023, I graduated from Georgia Tech and now work for Bank of America.</p>
+      </section>
+      <section class="skills">
+        <h2 class="">Skills</h2>
+        <div>
+            <div>C/C++</div>
+            <div>Java</div>
+            <div>Python</div>
+            <div>Linux</div>
+            <div>Git</div>
+            <div>Jenkins</div>
+        </div>
+      </section>
+      <section class="">
+        <h2 class="">Experience</h2>
+        <article class="experience">
+            <h3 class="experience__company"> Bank of America </h3>
+            <div class="experience__title"> Java Developer </div>
+            <div class="experience__date"> January 2024 - Present </div>
+            <ul>
+                <li>Creating a PoC for Systemware Cloud version 7 which consolidates the DB to Oracle, synchronizes logs, and adds a central configuration manager.</li>
+                <li>Supplementing vendor code to add support decrypting file transmissions.</li>
+                <li>Contributing to the architecture and code to encrypt and transfer files between bank projects.</li>
+                <li>Represented the team to provide testing and support releases.</li>
+            <ul>
+        </article>
 
-<h1>Simon's Website</h1>
+        <article class="experience">
+            <h3 class="experience__company"> Georgia Tech Research Institute </h3>
+            <div class="experience__title"> Co-op (Electronic Systems Lab) </div>
+            <div class="experience__date"> May 2020 - December 2021 </div>
+            <ul>
+                <li>Designed a CI pipeline with Jenkins managing code generation, multi-platform compilation, and validation to an open avionics standard.</li>
+                <li>Programmed a UDP multicast service for an aircraft's internal network communication, improving communication between on-board systems.</li>
+                <li>Contributed to C++ embedded development for a military avionic radio converter, focusing on I2C and Ethernet communication.</li>
+            </ul>
+        </article>
 
-</body>
-</html> 
+        <article class="experience">
+            <h3 class="experience__company"> Georgia Tech Research Institute </h3>
+            <div class="experience__title"> Intern (ATAS Lab) </div>
+            <div class="experience__date"> June - July 2019 </div>
+            <ul>
+                <li>Designed a visual interface for making autonomous routines for a 6-axis arm.</li>
+            </ul>
+        </article>
+
+        <article class="experience">
+            <h3 class="experience__company"> Georgia Tech Research Institute </h3>
+            <div class="experience__title"> Intern (CIPHER Lab) </div>
+            <div class="experience__date"> June - July 2018 </div>
+            <ul>
+                <li>Developed an IoT security system focusing on encrypted communication and node verification.</li>
+            </ul>
+        </article>
+      </section>
+      <section class="">
+        <h2 class="">Education</h2>
+        <article class="card">
+        <h3 class="card__title"> Georgia Institute of Technology </h3>
+        <div class="card__date"> August 2019 - May 2023 </div>
+        <ul class="card__desc">
+            <li class="card_item"> B.S. in Computer Science, GPA 3.37 </li>
+        </ul>
+        </article>
+      </section>
+      <section class="">
+        <h2 class="">Volunteering</h2>
+        <article class="card">
+        <h3 class="card__title"> High-School Robotics Mentor </h3>
+        <div class="card__date"> September 2022 - Present </div>
+        <ul class="card__desc">
+            <li class="card_item"> Help teach programming, leadership, and problem solving to students for competition robotics </li>
+        </ul>
+
+
+<!--
+        <article class="card">
+        <h3 class="card__title"> Crisis Text Line Volunteer </h3>
+        <div class="card__date"> May 2025 - Present </div>
+        <ul class="card__desc">
+            <li class="card_item"> </li>
+        </ul>
+-->
+      </section>
+      <section class="">
+        <h2 class="">Publications</h2>
+        <article class="card">
+            <h3 class="card__title"> Scalable Nonlinear Sequence Generation using Composite Mersenne Product Registers </h3>
+            <div class="card__date"> IACR Communications in Cryptology · Jan 13, 2025 </div>
+            <ul class="card__desc">
+                <li class="card_item"><a href="https://doi.org/10.62056/a3tx11zn4">doi.org/10.62056/a3tx11zn4</a></li>
+                <li class="card_item">We introduced a novel composition method that combines linear feedback registers into larger nonlinear structures and generalizes earlier methods such as cascade connections.</li>
+            </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
