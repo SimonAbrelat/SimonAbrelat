@@ -14,6 +14,14 @@
         url("fonts/Lato/lato-regular.tff") format("ttf");
 }
 
+@font-face {
+  font-family: "Lato";
+  font-weight: 100;
+    src: url("fonts/Lato/lato-light.woff2") format("woff2"),
+        url("fonts/Lato/lato-light.woff") format("woff"),
+        url("fonts/Lato/lato-light.tff") format("ttf");
+}
+
 
 /* CSS Reset 
  * https://www.joshwcomeau.com/css/custom-css-reset/
@@ -96,7 +104,7 @@ html {
 }
 
 body {
-    font-family: "Martel", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 /* General Utils: */
@@ -292,35 +300,70 @@ nav a {
   }
 }
 
-/* -- Testimonals (Index page) */
-.testimonal {
+/* Skills Grid */
+.skills {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: .5rem;
+}
+
+@media (max-width: 650px) {
+    .skills {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 350px) {
+    .skills {
+        grid-template-columns: auto;
+    }
+}
+
+.skills > div {
+    background-color: var(--clr-far-background);
+    padding-left: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    border-radius: 5px;
+
+}
+
+.experience {
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
 
-.testimonal p{
-    text-indent: calc(-.75 * var(--step-1));
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 0.5rem;
-    border-left: 1px solid #000;
+.experience .experience__company {
 }
 
-
-.testimonal p:before {
-    background: white;
-    content: open-quote;
-    font-size: var(--step-1);
+.experience__title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.testimonal p:after {
-    content: close-quote;
-    font-size: var(--step-1);
+.experience__title > div {
+    font-size: var(--step-2);
 }
 
-.testimonal span {
-    display: block;
-    text-align: end;
+.card {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.card__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card__title > div {
+    font-size: var(--step-2);
+}
+
+.font-light {
+    font-weight: 100;
 }
 
 /* -- hero headshot (Index page) */
@@ -331,121 +374,6 @@ nav a {
 
 @media (min-width: 650px) {
     .hero__headshot img {
-        max-width: 25ch;
-    }
-}
-
-/* -- offerings (Sessions Page) */
-.offering {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-} 
-
-.offering p {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
-.offering .price {
-  font-size: var(--step-0);
-  font-weight: bold;
-}
-
-/* -- faq (Sessions Page) */
-.faq {
-  margin-bottom: 1.5rem;
-} 
-
-.faq p {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
-/* -- Contact form (Contact Page) */
-.form_section {
-    margin: auto;
-    max-width: 50ch;
-    --input-gap: .75rem;
-}
-
-form {
-  display: grid;
-  --form-border-clr: rgba(0,0,0,.3);
-  --form-bg-clr: rgba(0,0,0,.05);
-}
-
-.span2 {} /* unneeded for mobile */
-.v2 {}
-
-@media (min-width: 650px) {
-  form {
-    display: grid;
-    grid-format-columns: 1fr 1fr;
-    column-gap: 1rem;
-    padding-bottom: 3rem;
-  }
-
-  .span2 {
-    grid-column: span 2;
-  }
-
-  .v2 {
-    grid-row: span 2;
-  }
-}
-
-form input {
-  border: 1px solid var(--form-border-clr);
-  background-color: var(--form-bg-clr);
-  margin-bottom: var(--input-gap);
-  display: block;
-  width: 100%;
-}
-
-form .req:after {
-  content: "*";
-  margin: .5ch;
-  color: red;
-}
-
-form textarea {
-  border: 1px solid var(--form-border-clr);
-  background-color: var(--form-bg-clr);
-  margin-bottom: var(--input-gap);
-  display: block;
-  width: 100%;
-}
-
-form label {
-  margin-top: var(--input-gap);
-  margin-bottom: .25rem;
-  width: 100%;
-}
-
-form .submit_button {
-  border-radius: 100vw;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  border: none;
-  box-shadow: 1px 1px 2px rgba(0,0,0, .2);
-  background-color: var(--form-border-clr);
-  width: 10ch;
-}
-
-form .submit_button:hover ,
-form .submit_button:focus {
-  background-color: var(--clr-accent);
-}
-
-/* about headshot (About Me Page) */
-.about__headshot {
-  border-radius: .5rem;
-  max-width: 60vw;
-}
-
-@media (min-width: 650px) {
-    .about__headshot img {
-        border-radius: .5rem;
         max-width: 25ch;
     }
 }
