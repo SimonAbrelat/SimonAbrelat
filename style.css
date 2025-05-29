@@ -305,20 +305,8 @@ nav a {
     margin-top: .5rem;
     margin-bottom: .5rem;
     display: grid;
-    grid-template-columns: auto auto auto;
     gap: .5rem;
-}
-
-@media (max-width: 650px) {
-    .skills {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media (max-width: 350px) {
-    .skills {
-        grid-template-columns: auto;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .skills > div {
@@ -327,7 +315,6 @@ nav a {
     padding-top: .25rem;
     padding-bottom: .25rem;
     border-radius: 5px;
-
 }
 
 .experience {
